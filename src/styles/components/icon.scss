@@ -1,0 +1,17 @@
+.petal-icon {
+  --petal-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--petal-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, success, info, warning, danger {
+  .petal-icon--#{$val} {
+    // 覆盖.petal-icon的color
+    --petal-icon-color: var(--petal-color-#{$val});
+  }
+}
