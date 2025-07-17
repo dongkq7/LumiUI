@@ -1,60 +1,60 @@
-.petal-button {
+.lumi-button {
   // 首先针对这个样式类，定义了一系列的样式变量
-  --petal-button-font-weight: var(--petal-font-weight-primary);
-  --petal-button-border-color: var(--petal-border-color);
-  --petal-button-bg-color: var(--petal-fill-color-blank);
-  --petal-button-text-color: var(--petal-text-color-regular);
-  --petal-button-disabled-text-color: var(--petal-disabled-text-color);
-  --petal-button-disabled-bg-color: var(--petal-fill-color-blank);
-  --petal-button-disabled-border-color: var(--petal-border-color-light);
-  --petal-button-hover-text-color: var(--petal-color-primary);
-  --petal-button-hover-bg-color: var(--petal-color-primary-light-9);
-  --petal-button-hover-border-color: var(--petal-color-primary-light-7);
-  --petal-button-active-text-color: var(--petal-button-hover-text-color);
-  --petal-button-active-border-color: var(--petal-color-primary);
-  --petal-button-active-bg-color: var(--petal-button-hover-bg-color);
-  --petal-button-outline-color: var(--petal-color-primary-light-5);
-  --petal-button-active-color: var(--petal-text-color-primary);
+  --lumi-button-font-weight: var(--lumi-font-weight-primary);
+  --lumi-button-border-color: var(--lumi-border-color);
+  --lumi-button-bg-color: var(--lumi-fill-color-blank);
+  --lumi-button-text-color: var(--lumi-text-color-regular);
+  --lumi-button-disabled-text-color: var(--lumi-disabled-text-color);
+  --lumi-button-disabled-bg-color: var(--lumi-fill-color-blank);
+  --lumi-button-disabled-border-color: var(--lumi-border-color-light);
+  --lumi-button-hover-text-color: var(--lumi-color-primary);
+  --lumi-button-hover-bg-color: var(--lumi-color-primary-light-9);
+  --lumi-button-hover-border-color: var(--lumi-color-primary-light-7);
+  --lumi-button-active-text-color: var(--lumi-button-hover-text-color);
+  --lumi-button-active-border-color: var(--lumi-color-primary);
+  --lumi-button-active-bg-color: var(--lumi-button-hover-bg-color);
+  --lumi-button-outline-color: var(--lumi-color-primary-light-5);
+  --lumi-button-active-color: var(--lumi-text-color-primary);
 }
 
-.petal-button {
+.lumi-button {
   // 再来书写基本样式
   display: inline-block;
   height: 40px;
   line-height: 1;
   white-space: nowrap;
   cursor: pointer;
-  background-color: var(--petal-button-bg-color);
-  border: var(--petal-border);
-  border-color: var(--petal-button-border-color);
-  color: var(--petal-button-text-color);
+  background-color: var(--lumi-button-bg-color);
+  border: var(--lumi-border);
+  border-color: var(--lumi-button-border-color);
+  color: var(--lumi-button-text-color);
   appearance: none;
   text-align: center;
   box-sizing: border-box;
   outline: none;
   margin: 0;
   transition: 0.5s;
-  font-weight: var(--petal-button-font-weight);
+  font-weight: var(--lumi-button-font-weight);
   user-select: none;
   vertical-align: middle;
   padding: 12px 20px;
-  font-size: var(--petal-font-size-base);
-  border-radius: var(--petal-border-radius-base);
+  font-size: var(--lumi-font-size-base);
+  border-radius: var(--lumi-border-radius-base);
   &:hover,
   &:focus {
-    color: var(--petal-button-hover-text-color);
-    border-color: var(--petal-button-hover-border-color);
-    background-color: var(--petal-button-hover-bg-color);
+    color: var(--lumi-button-hover-text-color);
+    border-color: var(--lumi-button-hover-border-color);
+    background-color: var(--lumi-button-hover-bg-color);
     outline: none;
   }
   &:active {
-    color: var(--petal-button-active-text-color);
-    border-color: var(--petal-button-active-border-color);
-    background-color: var(--petal-button-active-bg-color);
+    color: var(--lumi-button-active-text-color);
+    border-color: var(--lumi-button-active-border-color);
+    background-color: var(--lumi-button-active-bg-color);
     outline: none;
   }
   &.is-round {
-    border-radius: var(--petal-border-radius-round);
+    border-radius: var(--lumi-border-radius-round);
   }
   &.is-circle {
     width: 45px;
@@ -72,14 +72,14 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus {
-    color: var(--petal-button-disabled-text-color);
+    color: var(--lumi-button-disabled-text-color);
     cursor: not-allowed;
     background-image: none;
-    background-color: var(--petal-button-disabled-bg-color);
-    border-color: var(--petal-button-disabled-border-color);
+    background-color: var(--lumi-button-disabled-bg-color);
+    border-color: var(--lumi-button-disabled-border-color);
   }
 
-  [class*='petal-icon'] + span {
+  [class*='lumi-icon'] + span {
     position: relative;
     bottom: 2px;
     margin-left: 6px;
@@ -88,44 +88,44 @@
 
 @each $val in primary, success, warning, info, danger {
   // 通过挂上对应的类来改变CSS变量去覆盖默认样式
-  .petal-button--#{$val} {
-    --petal-button-text-color: var(--petal-color-white);
-    --petal-button-bg-color: var(--petal-color-#{$val});
-    --petal-button-border-color: var(--petal-color-#{$val});
-    --petal-button-outline-color: var(--petal-color-#{$val}-light-5);
-    --petal-button-active-color: var(--petal-color-#{$val}-dark-2);
-    --petal-button-hover-text-color: var(--petal-color-white);
-    --petal-button-hover-bg-color: var(--petal-color-#{$val}-light-3);
-    --petal-button-hover-border-color: var(--petal-color-#{$val}-light-3);
-    --petal-button-active-bg-color: var(--petal-color-#{$val}-dark-2);
-    --petal-button-active-border-color: var(--petal-color-#{$val}-dark-2);
-    --petal-button-disabled-text-color: var(--petal-color-white);
-    --petal-button-disabled-bg-color: var(--petal-color-#{$val}-light-5);
-    --petal-button-disabled-border-color: var(--petal-color-#{$val}-light-5);
+  .lumi-button--#{$val} {
+    --lumi-button-text-color: var(--lumi-color-white);
+    --lumi-button-bg-color: var(--lumi-color-#{$val});
+    --lumi-button-border-color: var(--lumi-color-#{$val});
+    --lumi-button-outline-color: var(--lumi-color-#{$val}-light-5);
+    --lumi-button-active-color: var(--lumi-color-#{$val}-dark-2);
+    --lumi-button-hover-text-color: var(--lumi-color-white);
+    --lumi-button-hover-bg-color: var(--lumi-color-#{$val}-light-3);
+    --lumi-button-hover-border-color: var(--lumi-color-#{$val}-light-3);
+    --lumi-button-active-bg-color: var(--lumi-color-#{$val}-dark-2);
+    --lumi-button-active-border-color: var(--lumi-color-#{$val}-dark-2);
+    --lumi-button-disabled-text-color: var(--lumi-color-white);
+    --lumi-button-disabled-bg-color: var(--lumi-color-#{$val}-light-5);
+    --lumi-button-disabled-border-color: var(--lumi-color-#{$val}-light-5);
   }
   // 如果挂了is-plain这个类，那么就改变CSS变量
-  .petal-button--#{$val}.is-plain {
-    --petal-button-text-color: var(--petal-color-#{$val});
-    --petal-button-bg-color: var(--petal-color-#{$val}-light-9);
-    --petal-button-border-color: var(--petal-color-#{$val}-light-5);
-    --petal-button-hover-text-color: var(--petal-color-white);
-    --petal-button-hover-bg-color: var(--petal-color-#{$val});
-    --petal-button-hover-border-color: var(--petal-color-#{$val});
-    --petal-button-active-text-color: var(--petal-color-white);
+  .lumi-button--#{$val}.is-plain {
+    --lumi-button-text-color: var(--lumi-color-#{$val});
+    --lumi-button-bg-color: var(--lumi-color-#{$val}-light-9);
+    --lumi-button-border-color: var(--lumi-color-#{$val}-light-5);
+    --lumi-button-hover-text-color: var(--lumi-color-white);
+    --lumi-button-hover-bg-color: var(--lumi-color-#{$val});
+    --lumi-button-hover-border-color: var(--lumi-color-#{$val});
+    --lumi-button-active-text-color: var(--lumi-color-white);
   }
 }
 
-.petal-button--large {
-  --petal-button-size: 50px;
-  height: var(--petal-button-size);
+.lumi-button--large {
+  --lumi-button-size: 50px;
+  height: var(--lumi-button-size);
   padding: 12px 19px;
-  font-size: var(--petal-font-size-base);
-  border-radius: var(--petal-border-radius-base);
+  font-size: var(--lumi-font-size-base);
+  border-radius: var(--lumi-border-radius-base);
 }
-.petal-button--small {
-  --petal-button-size: 24px;
-  height: var(--petal-button-size);
+.lumi-button--small {
+  --lumi-button-size: 24px;
+  height: var(--lumi-button-size);
   padding: 5px 11px;
   font-size: 12px;
-  border-radius: calc(var(--petal-border-radius-base) - 1px);
+  border-radius: calc(var(--lumi-border-radius-base) - 1px);
 }

@@ -1,25 +1,25 @@
 // 重置样式
 body {
-  font-family: var(--petal-font-family);
+  font-family: var(--lumi-font-family);
   font-weight: 400;
-  font-size: var(--petal-font-size-base);
-  color: var(--petal-text-color-primary);
+  font-size: var(--lumi-font-size-base);
+  color: var(--lumi-text-color-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
 }
 
 a {
-  color: var(--petal-color-black);
+  color: var(--lumi-color-black);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color: var(--petal-color-success-light-3);
+    color: var(--lumi-color-success-light-3);
   }
 
   &:active {
-    color: var(--petal-color-success-dark-2);
+    color: var(--lumi-color-success-dark-2);
   }
 }
 
@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--petal-text-color-regular);
+  color: var(--lumi-text-color-regular);
   font-weight: inherit;
 
   &:first-child {
@@ -42,15 +42,15 @@ h6 {
 }
 
 h1 {
-  font-size: calc(var(--petal-font-size-base) + 6px);
+  font-size: calc(var(--lumi-font-size-base) + 6px);
 }
 
 h2 {
-  font-size: calc(var(--petal-font-size-base) + 4px);
+  font-size: calc(var(--lumi-font-size-base) + 4px);
 }
 
 h3 {
-  font-size: calc(var(--petal-font-size-base) + 2px);
+  font-size: calc(var(--lumi-font-size-base) + 2px);
 }
 
 h4,
@@ -74,16 +74,16 @@ p {
 
 sup,
 sub {
-  font-size: calc(var(--petal-font-size-base) - 1px);
+  font-size: calc(var(--lumi-font-size-base) - 1px);
 }
 
 small {
-  font-size: calc(var(--petal-font-size-base) - 2px);
+  font-size: calc(var(--lumi-font-size-base) - 2px);
 }
 
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid var(--petal-border-color-lighter);
+  border-top: 1px solid var(--lumi-border-color-lighter);
 }

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">Petal UI</h1>
+  <h1 class="title">Lumi UI</h1>
   <nav class="nav">
     <router-link to="/">Icon</router-link>
     <router-link to="/button">Button</router-link>

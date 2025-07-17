@@ -1,17 +1,17 @@
-.petal-icon {
-  --petal-icon-color: inherit;
+.lumi-icon {
+  --lumi-icon-color: inherit;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
   fill: currentColor;
-  color: var(--petal-icon-color);
+  color: var(--lumi-icon-color);
   font-size: inherit;
 }
 
 @each $val in primary, success, info, warning, danger {
-  .petal-icon--#{$val} {
-    // 覆盖.petal-icon的color
-    --petal-icon-color: var(--petal-color-#{$val});
+  .lumi-icon--#{$val} {
+    // 覆盖.lumi-icon的color
+    --lumi-icon-color: var(--lumi-color-#{$val});
   }
 }

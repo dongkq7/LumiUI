@@ -13,75 +13,75 @@ $colors: (
 :root {
   // 根据主题色生成不同亮度的颜色
   @each $val, $color in $colors {
-    --petal-color-#{$val}: #{$color};
+    --lumi-color-#{$val}: #{$color};
 
     // 生成主题色对应的不同亮度的颜色
     // 生成主题色对应的不同亮度的颜色
     @for $i from 1 through 4 {
-      --petal-color-#{$val}-light-#{2 * $i + 1}: #{color.mix(
+      --lumi-color-#{$val}-light-#{2 * $i + 1}: #{color.mix(
           #fff,
           $color,
           ((2 * $i + 1) * 10 * 1%)
         )};
     }
     // dark2与light8不满足上面的规律，单独生成：
-    --petal-color-#{$val}-light-8: #{color.mix(#fff, $color, 80%)};
-    --petal-color-#{$val}-dark-2: #{color.mix(#000, $color, 20%)};
+    --lumi-color-#{$val}-light-8: #{color.mix(#fff, $color, 80%)};
+    --lumi-color-#{$val}-dark-2: #{color.mix(#000, $color, 20%)};
   }
 
   // 中性色相关变量
-  --petal-color-white: #fff;
-  --petal-color-black: #000;
-  --petal-bg-color: #ffffff;
-  --petal-bg-color-page: #f2f3f5;
-  --petal-bg-color-overlay: #ffffff;
-  --petal-text-color-primary: #303133;
-  --petal-text-color-regular: #606266;
-  --petal-text-color-secondary: #909399;
-  --petal-text-color-placeholder: #a8abb2;
-  --petal-text-color-disabled: #c0c4cc;
-  --petal-border-color: #dcdfe6;
-  --petal-border-color-light: #e4e7ed;
-  --petal-border-color-lighter: #ebeef5;
-  --petal-border-color-extra-light: #f2f6fc;
-  --petal-border-color-dark: #d4d7de;
-  --petal-border-color-darker: #cdd0d6;
-  --petal-fill-color: #f0f2f5;
-  --petal-fill-color-light: #f5f7fa;
-  --petal-fill-color-lighter: #fafafa;
-  --petal-fill-color-extra-light: #fafcff;
-  --petal-fill-color-dark: #ebedf0;
-  --petal-fill-color-darker: #e6e8eb;
-  --petal-fill-color-blank: #ffffff;
+  --lumi-color-white: #fff;
+  --lumi-color-black: #000;
+  --lumi-bg-color: #ffffff;
+  --lumi-bg-color-page: #f2f3f5;
+  --lumi-bg-color-overlay: #ffffff;
+  --lumi-text-color-primary: #303133;
+  --lumi-text-color-regular: #606266;
+  --lumi-text-color-secondary: #909399;
+  --lumi-text-color-placeholder: #a8abb2;
+  --lumi-text-color-disabled: #c0c4cc;
+  --lumi-border-color: #dcdfe6;
+  --lumi-border-color-light: #e4e7ed;
+  --lumi-border-color-lighter: #ebeef5;
+  --lumi-border-color-extra-light: #f2f6fc;
+  --lumi-border-color-dark: #d4d7de;
+  --lumi-border-color-darker: #cdd0d6;
+  --lumi-fill-color: #f0f2f5;
+  --lumi-fill-color-light: #f5f7fa;
+  --lumi-fill-color-lighter: #fafafa;
+  --lumi-fill-color-extra-light: #fafcff;
+  --lumi-fill-color-dark: #ebedf0;
+  --lumi-fill-color-darker: #e6e8eb;
+  --lumi-fill-color-blank: #ffffff;
 
   // border相关变量
-  --petal-border-width: 1px;
-  --petal-border-style: solid;
-  --petal-border-color-hover: var(--petal-text-color-disabled);
-  --petal-border: var(--petal-border-width) var(--petal-border-style) var(--petal-border-color);
-  --petal-border-radius-base: 4px;
-  --petal-border-radius-small: 2px;
-  --petal-border-radius-round: 20px;
-  --petal-border-radius-circle: 100%;
+  --lumi-border-width: 1px;
+  --lumi-border-style: solid;
+  --lumi-border-color-hover: var(--lumi-text-color-disabled);
+  --lumi-border: var(--lumi-border-width) var(--lumi-border-style) var(--lumi-border-color);
+  --lumi-border-radius-base: 4px;
+  --lumi-border-radius-small: 2px;
+  --lumi-border-radius-round: 20px;
+  --lumi-border-radius-circle: 100%;
 
   // font相关变量
-  --petal-font-size-extra-large: 20px;
-  --petal-font-size-large: 18px;
-  --petal-font-size-medium: 16px;
-  --petal-font-size-base: 14px;
-  --petal-font-size-small: 13px;
-  --petal-font-size-extra-small: 12px;
-  --petal-font-family:
+  --lumi-font-size-extra-large: 20px;
+  --lumi-font-size-large: 18px;
+  --lumi-font-size-medium: 16px;
+  --lumi-font-size-base: 14px;
+  --lumi-font-size-small: 13px;
+  --lumi-font-size-extra-small: 12px;
+  --lumi-font-family:
     'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
     '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
-  --petal-font-weight-primary: 500;
+  --lumi-font-weight-primary: 500;
 
   // disabled相关变量
-  --petal-disabled-bg-color: var(--petal-fill-color-light);
-  --petal-disabled-text-color: var(--petal-text-color-placeholder);
-  --petal-disabled-border-color: var(--petal-border-color-light);
+  --lumi-disabled-bg-color: var(--lumi-fill-color-light);
+  --lumi-disabled-text-color: var(--lumi-text-color-placeholder);
+  --lumi-disabled-border-color: var(--lumi-border-color-light);
 
   // transition相关变量
-  --petal-transition-duration: 0.3s;
-  --petal-transition-duration-fast: 0.2s;
+  --lumi-transition-duration: 0.3s;
+  --lumi-transition-duration-fast: 0.2s;
 }

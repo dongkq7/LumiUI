@@ -1,5 +1,5 @@
 <template>
-  <i class="petal-icon" :class="{ [`petal-icon--${type}`]: type }">
+  <i class="lumi-icon" :class="{ [`lumi-icon--${type}`]: type }">
     <FontAwesomeIcon v-bind="iconProps" />
   </i>
 </template>
@@ -10,7 +10,7 @@ import { computed } from 'vue'
 import { omit } from 'lodash-es'
 
 defineOptions({
-  name: 'PetalIcon',
+  name: 'LumiIcon',
 })
 const props = defineProps(propsObj)
 // 过滤掉自定义属性 type

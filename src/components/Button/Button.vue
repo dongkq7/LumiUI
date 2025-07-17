@@ -1,9 +1,9 @@
 <template>
   <button
-    class="petal-button"
+    class="lumi-button"
     :class="{
-      [`petal-button--${type}`]: type,
-      [`petal-button--${size}`]: size,
+      [`lumi-button--${type}`]: type,
+      [`lumi-button--${size}`]: size,
       'is-plain': plain,
       'is-round': round,
       'is-circle': circle,
@@ -11,8 +11,8 @@
     }"
     :disabled="disabled || loading"
   >
-    <PetalIcon icon="spinner" spin v-if="loading" />
-    <PetalIcon :icon="icon" v-if="icon" />
+    <LumiIcon icon="spinner" spin v-if="loading" />
+    <LumiIcon :icon="icon" v-if="icon" />
     <span v-if="$slots.default">
       <slot></slot>
     </span>
@@ -22,7 +22,7 @@
 <script setup>
 import propObj from './props'
 defineOptions({
-  name: 'PetalButton',
+  name: 'LumiButton',
 })
 defineProps(propObj)
 </script>
