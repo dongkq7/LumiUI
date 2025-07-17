@@ -71,10 +71,6 @@
     <LumiButton type="warning" icon="code" circle disabled></LumiButton>
     <LumiButton type="danger" icon="cube" circle disabled></LumiButton>
   </div>
-  <h1 class="row-title">按钮事件</h1>
-  <div class="row">
-    <LumiButton type="primary" @click="clickHandler" ref="btnRef">主要按钮</LumiButton>
-  </div>
 </template>
 
 <script setup></script>
