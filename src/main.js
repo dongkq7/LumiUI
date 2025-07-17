@@ -16,6 +16,7 @@ import LumiPager from './components/Pager/Pager.vue'
 import LumiCollapse from './components/Collapse/Collapse.vue'
 import LumiCollapseItem from './components/Collapse/CollapseItem.vue'
 import LumiTooltip from './components/Tooltip/Tooltip.vue'
+import LumiDropdown from './components/Dropdown/Dropdown.vue'
 
 const app = createApp(App)
 library.add(fas)
@@ -29,5 +30,6 @@ app.component('LumiPager', LumiPager)
 app.component('LumiCollapse', LumiCollapse)
 app.component('LumiCollapseItem', LumiCollapseItem)
 app.component('LumiTooltip', LumiTooltip)
+app.component('LumiDropdown', LumiDropdown)
 
 app.mount('#app')
