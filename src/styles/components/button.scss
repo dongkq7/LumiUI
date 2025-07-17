@@ -66,9 +66,6 @@
     align-items: center;
   }
   // 禁用相关的样式
-  &.is-disabled,
-  &.is-disabled:hover,
-  &.is-disabled:focus,
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus {

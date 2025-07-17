@@ -7,7 +7,6 @@
       'is-plain': plain,
       'is-round': round,
       'is-circle': circle,
-      'is-disabled': disabled,
     }"
     :disabled="disabled || loading"
   >

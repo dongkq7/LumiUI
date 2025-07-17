@@ -12,6 +12,7 @@ import LumiIcon from './components/Icon/Icon.vue'
 import LumiButton from './components/Button/Button.vue'
 import LumiCard from './components/Card/Card.vue'
 import LumiDialog from './components/Dialog/Dialog.vue'
+import LumiPager from './components/Pager/Pager.vue'
 
 const app = createApp(App)
 library.add(fas)
@@ -21,5 +22,6 @@ app.component('FontAwesomeIcon', FontAwesomeIcon)
 app.component('LumiButton', LumiButton)
 app.component('LumiCard', LumiCard)
 app.component('LumiDialog', LumiDialog)
+app.component('LumiPager', LumiPager)
 
 app.mount('#app')

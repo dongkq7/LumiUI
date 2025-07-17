@@ -1,0 +1,56 @@
+.lumi-pager {
+  --lumi-pager-theme-color: var(--lumi-color-primary);
+  --lumi-pager-size: 34px;
+  --lumi-pager-padding: 0 12px;
+  --lumi-pager-font-size: var(--lumi-font-size-base);
+}
+.lumi-pager {
+  text-align: center;
+  a {
+    border: 1px solid #e1e2e3;
+    background-color: #f0f2f5;
+    color: #303133;
+    height: var(--lumi-pager-size);
+    display: inline-block;
+    line-height: var(--lumi-pager-size);
+    border-radius: 2px;
+    padding: var(--lumi-pager-padding);
+    margin: 8px;
+    font-size: var(--lumi-pager-font-size);
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      color: var(--lumi-pager-theme-color);
+    }
+    /* 当前页会挂上 active 类 */
+    &.active {
+      //   border: none;
+      color: #fff;
+      background-color: var(--lumi-pager-theme-color);
+      border-color: var(--lumi-pager-theme-color);
+    }
+    /* a 标签禁用的时候会挂上 disabled 类 */
+    &.disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@each $val in primary, success, warning, info, danger {
+  .lumi-pager--#{$val} {
+    --lumi-pager-theme-color: var(--lumi-color-#{$val});
+  }
+}
+
+.lumi-pager--small {
+  --lumi-pager-size: 25px;
+  --lumi-pager-padding: 0 8px;
+  --lumi-pager-font-size: var(--lumi-font-size-small);
+}
+
+.lumi-pager--large {
+  --lumi-pager-size: 44px;
+  --lumi-pager-padding: 0 16px;
+  --lumi-pager-font-size: var(--lumi-font-size-large);
+}
