@@ -73,9 +73,10 @@ const close = () => {
 const attachEvent = () => {
   // 判断触发方式：hover/click
   if (props.trigger === 'hover') {
-    events['mouseenter'] = open
     // 给外侧容器绑定leave事件，只要从trigger元素离开移入popper元素并且没有移到中间间隙，就不会触发leave事件
     outerEvents['mouseleave'] = close
+    // 给外层容器也绑定enter事件，防止用户通过间隙进入popper元素后但是delay时间到了触发了close
+    outerEvents['mouseenter'] = open
   }
   if (props.trigger === 'click') {
     events['click'] = () => (isOpen.value ? close() : open())
