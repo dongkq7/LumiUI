@@ -1,0 +1,57 @@
+.lumi-collapse {
+  --lumi-collapse-border-color: var(--lumi-border-color-light);
+  --lumi-collapse-header-height: 48px;
+  --lumi-collapse-header-bg-color: var(--lumi-fill-color-blank);
+  --lumi-collapse-header-text-color: var(--lumi-text-color-primary);
+  --lumi-collapse-header-font-size: 13px;
+  --lumi-collapse-content-bg-color: var(--lumi-fill-color-blank);
+  --lumi-collapse-content-font-size: 13px;
+  --lumi-collapse-content-text-color: var(--lumi-text-color-primary);
+  --lumi-collapse-disabled-text-color: var(--lumi-disabled-text-color);
+  --lumi-collapse-disabled-border-color: var(--lumi-border-color-lighter);
+  border-top: 1px solid var(--lumi-collapse-border-color);
+  width: 100%;
+}
+.lumi-collapse-item__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--lumi-collapse-header-height);
+  line-height: var(--lumi-collapse-header-height);
+  background-color: var(--lumi-collapse-header-bg-color);
+  color: var(--lumi-collapse-header-text-color);
+  cursor: pointer;
+  font-size: var(--lumi-collapse-header-font-size);
+  font-weight: 500;
+  transition: border-bottom-color var(--lumi-transition-duration);
+  outline: none;
+  border-bottom: 1px solid var(--lumi-collapse-border-color);
+  &.is-disabled {
+    color: var(--lumi-collapse-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+  }
+  &.is-active {
+    border-bottom-color: transparent;
+    .header-angle {
+      transform: rotate(90deg);
+    }
+  }
+  .header-angle {
+    transition: transform var(--lumi-transition-duration);
+  }
+}
+.lumi-collapse-item__content {
+  will-change: height;
+  background-color: var(--lumi-collapse-content-bg-color);
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: var(--lumi-collapse-content-font-size);
+  color: var(--lumi-collapse-content-text-color);
+  border-bottom: 1px solid var(--lumi-collapse-border-color);
+  padding-bottom: 25px;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: height var(--lumi-transition-duration);
+}

@@ -13,6 +13,8 @@ import LumiButton from './components/Button/Button.vue'
 import LumiCard from './components/Card/Card.vue'
 import LumiDialog from './components/Dialog/Dialog.vue'
 import LumiPager from './components/Pager/Pager.vue'
+import LumiCollapse from './components/Collapse/Collapse.vue'
+import LumiCollapseItem from './components/Collapse/CollapseItem.vue'
 
 const app = createApp(App)
 library.add(fas)
@@ -23,5 +25,7 @@ app.component('LumiButton', LumiButton)
 app.component('LumiCard', LumiCard)
 app.component('LumiDialog', LumiDialog)
 app.component('LumiPager', LumiPager)
+app.component('LumiCollapse', LumiCollapse)
+app.component('LumiCollapseItem', LumiCollapseItem)
 
 app.mount('#app')
