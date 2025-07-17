@@ -1,23 +1,45 @@
 {
   "name": "lumiui",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A UI library for Vue 3",
   "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "ui",
+    "library",
+    "component"
+  ],
+  "files": [
+    "dist"
+  ],
+  "module": "dist/es/lumi-ui.js",
+  "main": "dist/umd/lumi-ui.umd.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/es/lumi-ui.js",
+      "require": "./dist/umd/lumi-ui.umd.cjs"
+    }
+  },
+  "author": "dongkq7",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "pnpm build:es && pnpm build:umd",
+    "build:es": "vite build --config vite.es.config.js",
+    "build:umd": "vite build --config vite.umd.config.js",
     "preview": "vite preview",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.17"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.1.7",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
-    "lodash-es": "^4.17.21",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -30,6 +52,8 @@
     "prettier": "3.5.3",
     "sass-embedded": "^1.89.2",
     "vite": "^7.0.0",
-    "vite-plugin-vue-devtools": "^7.7.7"
+    "vite-plugin-vue-devtools": "^7.7.7",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   }
 }
