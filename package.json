@@ -1,5 +1,5 @@
 {
-  "name": "lumi-ui",
+  "name": "@dongkq7/lumi-ui",
   "version": "1.0.0",
   "description": "A UI library for Vue 3",
   "type": "module",
